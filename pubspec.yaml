@@ -1,0 +1,44 @@
+name: furniture_hopping
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: '>=3.2.3 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  google_fonts: ^6.1.0
+  flutter_svg: ^1.1.6
+  gap: ^3.0.1
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/search.svg
+    - assets/Group.svg
+    - assets/bed.svg
+    - assets/sofa.svg
+    - assets/chair.svg
+    - assets/table.svg
+    - assets/bell.svg
+    - assets/home.svg
+    - assets/Vector.svg
+    - assets/star.svg
+    - assets/person.svg
+    - assets/pic1.png
+    - assets/pic2.png
+    - assets/pic3.png
+    - assets/pic4.png
+    - assets/pic5.png
+    - assets/Shape.png
+    - assets/bag.svg
+    - assets/bag1.svg
+    - assets/pro.svg
