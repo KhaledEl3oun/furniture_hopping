@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:furniture_hopping/core/appColor.dart';
 import 'package:furniture_hopping/feature/favourite/favouriteVeiw.dart';
@@ -14,7 +13,12 @@ class navBar extends StatefulWidget {
   State<navBar> createState() => _navBarState();
 }
 
-List<Widget> screen = [homeVeiw(), favourite(), notification(), profile()];
+List<Widget> screen = [
+  const homeVeiw(),
+  const favourite(),
+  const notification(),
+  const profile()
+];
 int current = 0;
 
 class _navBarState extends State<navBar> {
@@ -34,13 +38,31 @@ class _navBarState extends State<navBar> {
             selectedItemColor: appColor.blackColor,
             items: [
               BottomNavigationBarItem(
-                  icon: SvgPicture.asset('assets/home.svg'), label: ''),
+                  icon: SvgPicture.asset('assets/home.svg'),
+                  activeIcon: SvgPicture.asset('assets/home.svg',
+                      colorFilter: const ColorFilter.mode(
+                          Colors.black, BlendMode.srcIn)),
+                  label: ''),
               BottomNavigationBarItem(
-                  icon: SvgPicture.asset('assets/Vector.svg'), label: ''),
+                  icon: SvgPicture.asset('assets/Vector.svg'),
+                  activeIcon: SvgPicture.asset(
+                    'assets/home.svg',
+                    colorFilter:
+                        const ColorFilter.mode(Colors.black, BlendMode.srcIn),
+                  ),
+                  label: ''),
               BottomNavigationBarItem(
-                  icon: SvgPicture.asset('assets/bell.svg'), label: ''),
+                  icon: SvgPicture.asset('assets/bell.svg'),
+                  activeIcon: SvgPicture.asset('assets/bell.svg',
+                      colorFilter: const ColorFilter.mode(
+                          Colors.black, BlendMode.srcIn)),
+                  label: ''),
               BottomNavigationBarItem(
-                  icon: SvgPicture.asset('assets/person.svg'), label: ''),
+                  icon: SvgPicture.asset('assets/person.svg'),
+                  activeIcon: SvgPicture.asset('assets/person.svg',
+                      colorFilter: const ColorFilter.mode(
+                          Colors.black, BlendMode.srcIn)),
+                  label: ''),
             ]));
   }
 }
